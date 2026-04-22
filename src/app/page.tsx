@@ -88,17 +88,18 @@ export default function Home() {
           </div>
 
           <p className="text-sm md:text-base text-muted-light leading-relaxed max-w-md mb-4 text-pretty">
-            Product designer with 6+ years building digital products across{" "}
+            Product designer with 6+ years across{" "}
             <span className="text-white">fintech</span>,{" "}
-            <span className="text-white">SAAS</span>, and{" "}
-            <span className="text-white">B2B</span>. I turn complex problems into intuitive experiences that drive growth.
+            <span className="text-white">SaaS</span>,{" "}
+            <span className="text-white">health</span>, and{" "}
+            <span className="text-white">B2B</span>. The industries change, but the craft of turning problems into shipped products doesn&apos;t.
           </p>
 
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400 pulse-dot" />
               <span className="text-xs text-muted-light">
-                Available for projects
+                Open to new opportunities
               </span>
             </div>
           </div>
