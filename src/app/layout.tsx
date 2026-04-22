@@ -11,11 +11,11 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Uche Divine — Product Designer",
   description:
-    "UK-based Product Designer with 7+ years crafting digital experiences across SAAS, B2B, B2C, and fintech.",
+    "UK-based product designer with 6+ years across fintech, SaaS, B2B, and health. Turning messy problems into shipped products.",
   openGraph: {
     title: "Uche Divine — Product Designer",
     description:
-      "UK-based Product Designer with 7+ years crafting digital experiences across SAAS, B2B, B2C, and fintech.",
+      "UK-based product designer with 6+ years across fintech, SaaS, B2B, and health. Turning messy problems into shipped products.",
     type: "website",
   },
 };
