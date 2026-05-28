@@ -1,4 +1,4 @@
-import { Figure, Gallery, Callout, PullQuote, MetricGrid, Metric, ImagePlaceholder } from "@/components/case-study";
+import { Figure, Gallery, Callout, PullQuote, MetricGrid, Metric, ImagePlaceholder, ProductCTA } from "@/components/case-study";
 
 export const meta = {
   slug: "stellas-bank",
@@ -14,14 +14,12 @@ export const meta = {
   team:
     "10 cross-functional: designer, PM, PO, 3 engineers, DevOps, QA, data analyst, marketing",
   mediumLink:
-    "https://pitch.com/v/stellas-presentation-nd33x2/76147bc2-54b2-44ab-9d3f-97c72395eadd",
+    "https://medium.com/design-bootcamp/the-stellas-digital-bank-redesign-case-study-5faf12975953",
 };
 
-{/* IMAGE: Slide 5 / Stellas app phone mockup on white. Hero image. */}
-<ImagePlaceholder
-  slideRef="Slide 5"
-  alt="Stellas app phone mockup on a white field (hero image)"
-  aspect="16/9"
+<Figure
+  src="/images/stellas-cover-shot.png"
+  alt="Two Stellas app screens: the Send Money transfer flow and the home dashboard with savings balance and quick actions"
 />
 
 ## Context
@@ -51,20 +49,6 @@ Three patterns kept repeating:
 
 That gave us a specific design target: **make amount entry feel deliberate, unhurried, and bank-grade.** Not faster. Slower in the right places.
 
-{/* IMAGE: Slide 18 / empathy map (SAY/THINK/FEEL/DOES) with named users */}
-<ImagePlaceholder
-  slideRef="Slide 18"
-  alt="Empathy map quadrants (SAY / THINK / FEEL / DOES) with named users from the Stellas research cohort"
-  aspect="4/3"
-/>
-
-{/* IMAGE: Slide 17 / recurring feedbacks (24/30, 28/30, 20/30) + Gmail research invite */}
-<ImagePlaceholder
-  slideRef="Slide 17"
-  alt="Recurring feedback from surveys and interviews: 24/30, 28/30, 20/30 breakdowns alongside the Gmail research-invite screenshot"
-  aspect="4/3"
-/>
-
 ## The first attempt
 
 ### The slider
@@ -75,18 +59,9 @@ Alongside the input, I set explicit targets with the PM before we shipped: lift 
 
 We shipped the slider in 2021.
 
-{/* IMAGE: Slide 40 (primary) / full six-screen v1 flow with slider amount picker */}
-<ImagePlaceholder
-  slideRef="Slide 40"
-  alt="Full six-screen v1 flow: Send Money with slider, Beneficiaries, Bank select, filled state, Confirm, Success"
-  aspect="21/9"
-/>
-
-{/* IMAGE: Slide 39 (alt) / cleaner single-screen of just the v1 slider, use if Slide 40 reads too busy */}
-<ImagePlaceholder
-  slideRef="Slide 39 (alt)"
-  alt="Cleaner single-screen hero of the v1 slider amount picker"
-  aspect="3/4"
+<Figure
+  src="/images/stellas-v1-slider.png"
+  alt="The v1 slider attempt: a Send Money screen with a horizontal amount scrubber and 'tap to edit' fallback, alongside the Confirm Details sheet"
 />
 
 ## What actually happened
@@ -105,11 +80,9 @@ I had mistaken novelty for deliberateness. The slider made users *feel* like the
 
 It's not a comfortable part to show in a portfolio. But it's the one I learned most from: the difference between a design decision that *feels smart* and a design decision that *actually protects the user*.
 
-{/* IMAGE: Slide 43 / yellow sticky-note callout (7/10 users + doubled reversals + 30% satisfaction decline) */}
-<ImagePlaceholder
-  slideRef="Slide 43"
-  alt="Yellow sticky-note callout: 7/10 users sent wrong amounts, reversal requests doubled, 30% satisfaction decline"
-  aspect="4/3"
+<Figure
+  src="/images/stellas-failure-stats.webp"
+  alt="Recurring feedback from surveys and interviews: 7/10 users sent incorrect amounts due to unfamiliarity with the slider, transaction reversal requests doubled, and user satisfaction declined by 30%"
 />
 
 ## The redesign
@@ -122,11 +95,9 @@ Accessibility-wise, we held to the same standards we apply across every flow; no
 
 The design worked because the slowness now lived at the **confirm** step, where users wanted it, not at the **input** step, where they wanted speed with accuracy.
 
-{/* IMAGE: Slide 45 / hero asset: fully-annotated v2 Send Money screen */}
-<ImagePlaceholder
-  slideRef="Slide 45"
-  alt="Fully-annotated v2 Send Money screen: new input field, three quick-select chips, bank/account/narration inputs, Ghost Mode toggle, disabled Proceed button"
-  aspect="3/4"
+<Figure
+  src="/images/stellas-v2-annotated.png"
+  alt="Annotated v2 Send Money screen: direct amount input with quick-select chips, account balance card, bank/account/narration fields, Ghost Mode toggle, and a disabled Proceed button until mandatory fields are filled"
 />
 
 ## Results
@@ -141,20 +112,6 @@ The design worked because the slowness now lived at the **confirm** step, where 
 
 Beyond the numbers, the support team noticed the shift within the first week: *'I sent the wrong amount'* dropped off the top-five ticket list for the first time since launch.
 
-{/* IMAGE: Slide 47 / results stats (70% / 40% / 90%) over confetti background */}
-<ImagePlaceholder
-  slideRef="Slide 47"
-  alt="Results stats (70% / 40% / 90%) over a confetti background"
-  aspect="16/9"
-/>
-
-{/* IMAGE: Slide 37 (optional) / pre-launch goals (75 to 90%, 40 to below 10%), shows targets set up front */}
-<ImagePlaceholder
-  slideRef="Slide 37 (optional)"
-  alt="Pre-launch goals: success rate 75% to 90%, dissatisfaction 40% to below 10%"
-  aspect="16/9"
-/>
-
 ## What I took with me
 
 ### The lesson
@@ -164,3 +121,11 @@ The slider was a lesson in mistaking the *feel* of a decision for the *fact* of 
 <Callout kind="principle" label="Design principle carried into later onboarding and account-deletion work">
   "The moment a user cares most is the moment we slow down."
 </Callout>
+
+<ProductCTA
+  title="See it live"
+  primaryLabel="Visit Stellas"
+  website="https://www.stellasbank.com/"
+  appStore="https://apps.apple.com/us/app/stellas-bank-invest-privacy/id1592332069"
+  playStore="https://play.google.com/store/apps/details?id=com.androidapp.stellas"
+/>

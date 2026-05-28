@@ -29,8 +29,8 @@ export default function Callout({
 }: CalloutProps) {
   if (kind === "principle") {
     return (
-      <aside className="my-16 rounded-2xl border border-border bg-dark-card px-8 py-10 md:px-12 md:py-14 text-center">
-        <div className="text-xl md:text-2xl text-white leading-relaxed font-light max-w-xl mx-auto text-pretty [&>p]:mb-0">
+      <aside className="my-16 rounded-2xl border border-accent/25 bg-gradient-to-br from-accent/15 via-accent/5 to-transparent px-8 py-10 md:px-12 md:py-14 text-center">
+        <div className="text-xl md:text-2xl text-white leading-relaxed font-light max-w-xl mx-auto text-pretty [&>p]:mb-0 [&>p]:text-white">
           {children}
         </div>
         {label && (
