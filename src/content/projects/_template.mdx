@@ -1,0 +1,93 @@
+{/*
+  CASE STUDY TEMPLATE — copy this file to add a new project.
+
+  Steps to add a new project:
+    1. Copy this file: cp _template.mdx <slug>.mdx
+    2. Fill in the `meta` export and replace every [REPLACE: ...] marker
+    3. Register the import in src/app/projects/[slug]/page.tsx (mdxProjects map)
+    4. Add a matching entry to src/data/projects.ts so it appears on the homepage grid
+
+  Available primitives (all from @/components/case-study):
+    <Figure src="..." alt="..." />          — single image
+    <Gallery layout="2-col|3-col|stacked">  — wrap multiple <Figure>s
+    <Callout kind="problem|insight|note" label="...">
+    <PullQuote author="...">                — large italic quote
+    <MetricGrid columns={3}>                — wrap <Metric>s
+    <Metric value="..." label="..." />      — single stat tile
+
+  Files starting with _ are ignored by the route map. This file is editor-only.
+*/}
+
+import { Figure, Gallery, Callout, PullQuote, MetricGrid, Metric } from "@/components/case-study";
+
+export const meta = {
+  slug: "[REPLACE: kebab-case-slug]",
+  title: "[REPLACE: Project Title]",
+  subtitle: "[REPLACE: One-line description]",
+  category: "[REPLACE: e.g. Fintech]",
+  color: "from-blue-500/20 to-blue-900/5", // [REPLACE: pick a Tailwind gradient]
+  cover: "/images/[REPLACE: cover.png]",
+  year: "[REPLACE: 2025]",
+  role: ["[REPLACE: Product Design]"],
+  industry: ["[REPLACE: Industry]"],
+  // Optional:
+  // mediumLink: "https://medium.com/...",
+};
+
+## Overview
+
+[REPLACE: 2-3 sentences. What was this project, who was it for, what was your role at the highest level.]
+
+<Figure src="/images/[REPLACE: hero-image.png]" alt="[REPLACE: alt text]" />
+
+## The Challenge
+
+[REPLACE: 1-2 sentences describing the problem before you started.]
+
+<Callout kind="problem">
+  [REPLACE: A specific, quantified problem statement. Use **bold** for the
+  numbers — e.g. "Avg. checkout took **47 seconds** and **00%** of users
+  abandoned."]
+</Callout>
+
+[REPLACE: Optional: one more paragraph framing why this mattered.]
+
+## The Approach
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-12">
+  <div>
+
+[REPLACE: Lead paragraph — what you did. Use **bold** for emphasis.]
+
+[REPLACE: Second paragraph — what mattered or how you decided priorities.]
+
+  </div>
+  <Figure src="/images/[REPLACE: approach-image.png]" alt="[REPLACE: alt]" />
+</div>
+
+## Outcome by the numbers
+
+<MetricGrid>
+  <Metric value="[REPLACE: 00%]" label="[REPLACE: Metric label]" />
+  <Metric value="[REPLACE: 00s]" label="[REPLACE: Metric label]" />
+  <Metric value="[REPLACE: +00]" label="[REPLACE: Metric label]" />
+</MetricGrid>
+
+<PullQuote author="[REPLACE: Name, Role, Company]">
+  "[REPLACE: Real customer or stakeholder quote that captures the impact.]"
+</PullQuote>
+
+## [REPLACE: Optional section — e.g. "Launch", "Reporting", "App Store Presence"]
+
+[REPLACE: Paragraph for this section.]
+
+<Gallery layout="3-col">
+  <Figure src="/images/[REPLACE].png" alt="[REPLACE]" />
+  <Figure src="/images/[REPLACE].png" alt="[REPLACE]" />
+  <Figure src="/images/[REPLACE].png" alt="[REPLACE]" />
+</Gallery>
+
+<Callout kind="insight" label="What carried the project">
+  [REPLACE: The single most important decision or insight that made this
+  project work. The one thing you'd want a reader to walk away with.]
+</Callout>

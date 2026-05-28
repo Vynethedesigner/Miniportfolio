@@ -2,6 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, getProjectBySlug } from "@/data/projects";
+import CaseStudyLayout, {
+  type CaseStudyMeta,
+} from "@/components/case-study/CaseStudyLayout";
+
+type MdxCaseStudy = {
+  default: React.ComponentType;
+  meta: CaseStudyMeta;
+};
+
+const mdxProjects: Record<string, () => Promise<MdxCaseStudy>> = {
+  "stellas-bank": () =>
+    import("@/content/projects/stellas-bank.mdx") as Promise<MdxCaseStudy>,
+  wastenot: () =>
+    import("@/content/projects/wastenot.mdx") as Promise<MdxCaseStudy>,
+  medstation: () =>
+    import("@/content/projects/medstation.mdx") as Promise<MdxCaseStudy>,
+  interstellas: () =>
+    import("@/content/projects/interstellas.mdx") as Promise<MdxCaseStudy>,
+  wekurnect: () =>
+    import("@/content/projects/wekurnect.mdx") as Promise<MdxCaseStudy>,
+};
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -9,6 +30,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  if (mdxProjects[slug]) {
+    const { meta } = await mdxProjects[slug]();
+    return {
+      title: `${meta.title} — Uche Divine`,
+      description: meta.subtitle,
+    };
+  }
+
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Not Found" };
   return {
@@ -19,6 +49,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  if (mdxProjects[slug]) {
+    const { default: Content, meta } = await mdxProjects[slug]();
+    return (
+      <CaseStudyLayout meta={meta}>
+        <Content />
+      </CaseStudyLayout>
+    );
+  }
+
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
