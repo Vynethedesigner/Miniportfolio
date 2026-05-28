@@ -12,7 +12,7 @@ export default function PullQuote({ children, author }: PullQuoteProps) {
         {children}
       </div>
       {author && (
-        <footer className="text-sm text-muted mt-3 not-italic">— {author}</footer>
+        <footer className="text-sm text-muted mt-3 not-italic">{author}</footer>
       )}
     </blockquote>
   );

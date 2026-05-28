@@ -88,11 +88,10 @@ export default function Home() {
           </div>
 
           <p className="text-sm md:text-base text-muted-light leading-relaxed max-w-md mb-4 text-pretty">
-            Product designer with 6+ years across{" "}
-            <span className="text-white">fintech</span>,{" "}
-            <span className="text-white">SaaS</span>,{" "}
-            <span className="text-white">health</span>, and{" "}
-            <span className="text-white">B2B</span>. The industries change, but the craft of turning problems into shipped products doesn&apos;t.
+            Product designer who builds{" "}
+            <span className="text-white">0→1 products</span> and shapes where they go. I&apos;ve taken a{" "}
+            <span className="text-white">digital bank from zero to launch</span> and built{" "}
+            <span className="text-white">B2B platforms</span> across emerging markets.
           </p>
 
           <div className="flex items-center gap-4 mb-6">

@@ -8,29 +8,29 @@ export const meta = {
   category: "Fintech",
   color: "from-orange-500/20 to-orange-900/5",
   cover: null,
-  year: "2021 – 2022",
+  year: "2021–2022",
   role: ["Product Designer", "Lead"],
   industry: ["Banking", "Fintech"],
   team:
-    "10 cross-functional — designer, PM, PO, 3 engineers, DevOps, QA, data analyst, marketing",
+    "10 cross-functional: designer, PM, PO, 3 engineers, DevOps, QA, data analyst, marketing",
   mediumLink:
     "https://pitch.com/v/stellas-presentation-nd33x2/76147bc2-54b2-44ab-9d3f-97c72395eadd",
 };
 
-{/* IMAGE: Slide 5 — Stellas app phone mockup on white. Hero image. */}
+{/* IMAGE: Slide 5 / Stellas app phone mockup on white. Hero image. */}
 <ImagePlaceholder
   slideRef="Slide 5"
-  alt="Stellas app phone mockup on a white field — hero image"
+  alt="Stellas app phone mockup on a white field (hero image)"
   aspect="16/9"
 />
 
 ## Context
 
-Stellas is a digital challenger bank built for Nigerians at home and in the UK — one of the few fintech products where a single 'send money' action can mean rent, school fees, or a parent's hospital bill. The stakes for getting transfer right weren't abstract. A failed transfer wasn't a feature bug; it was a cousin not paid on time.
+Stellas is a digital challenger bank built for Nigerians at home and in the UK, one of the few fintech products where a single 'send money' action can mean rent, school fees, or a parent's hospital bill. The stakes for getting transfer right weren't abstract. A failed transfer wasn't a feature bug; it was a cousin not paid on time.
 
-Before the redesign, **35% of transfers failed** — twice the industry average. Success rate sat at 65%, and 40% of users reported dissatisfaction with the feature in our surveys. Support tickets were dominated by reversal requests and 'where is my money' confusion.
+Before the redesign, the transfer flow had a **75% transaction success rate** (one in four transfers didn't complete cleanly), and 40% of users reported dissatisfaction with the feature in our surveys. Support tickets were dominated by reversal requests and 'where is my money' confusion.
 
-I led product design on a ten-person cross-functional team — two backend engineers, a mobile developer, DevOps, QA, product owner, product manager, data analyst, and marketing — with me owning the end-to-end design of the flow.
+I led product design on a ten-person cross-functional team: two backend engineers, a mobile developer, DevOps, QA, product owner, product manager, data analyst, and marketing, with me owning the end-to-end design of the flow.
 
 ## The research
 
@@ -42,26 +42,26 @@ Three patterns kept repeating:
 
 - Users hesitated on the **amount entry** step, not the recipient selection
 - Errors clustered at the **confirm** screen, not earlier in the flow
-- Trust eroded when the numeric keypad felt 'generic' — users wanted affirmation that a bank was a bank
+- Trust eroded when the numeric keypad felt 'generic'; users wanted affirmation that a bank was a bank
 
 <PullQuote author="Paraphrased from user interviews, Stellas research cohort">
   I'm not trying to be fast with this. I'm trying to be right. I type the
-  amount, delete it, type it again — you can't undo sending money wrong.
+  amount, delete it, type it again. You can't undo sending money wrong.
 </PullQuote>
 
 That gave us a specific design target: **make amount entry feel deliberate, unhurried, and bank-grade.** Not faster. Slower in the right places.
 
-{/* IMAGE: Slide 18 — empathy map (SAY/THINK/FEEL/DOES) with named users */}
+{/* IMAGE: Slide 18 / empathy map (SAY/THINK/FEEL/DOES) with named users */}
 <ImagePlaceholder
   slideRef="Slide 18"
-  alt="Empathy map quadrants — SAY / THINK / FEEL / DOES — with named users from the Stellas research cohort"
+  alt="Empathy map quadrants (SAY / THINK / FEEL / DOES) with named users from the Stellas research cohort"
   aspect="4/3"
 />
 
-{/* IMAGE: Slide 17 — recurring feedbacks (24/30, 28/30, 20/30) + Gmail research invite */}
+{/* IMAGE: Slide 17 / recurring feedbacks (24/30, 28/30, 20/30) + Gmail research invite */}
 <ImagePlaceholder
   slideRef="Slide 17"
-  alt="Recurring feedback from surveys and interviews — 24/30, 28/30, 20/30 breakdowns alongside the Gmail research-invite screenshot"
+  alt="Recurring feedback from surveys and interviews: 24/30, 28/30, 20/30 breakdowns alongside the Gmail research-invite screenshot"
   aspect="4/3"
 />
 
@@ -69,20 +69,20 @@ That gave us a specific design target: **make amount entry feel deliberate, unhu
 
 ### The slider
 
-My initial solve was a slider-based amount picker with preset values (₦10k, ₦20k, ₦30k, ₦40k…) and a double-tap-to-edit fallback for custom amounts. The theory was legitimate: a slider forces a physical gesture tied to the value, which should make a user *feel* the number rather than just type it — reducing the 'I meant ₦10,000, not ₦100,000' class of mistake. Presets would also speed up the most common transfer sizes.
+My initial solve was a slider-based amount picker with preset values (₦10k, ₦20k, ₦30k, ₦40k…) and a double-tap-to-edit fallback for custom amounts. The theory was legitimate: a slider forces a physical gesture tied to the value, which should make a user *feel* the number rather than just type it, reducing the 'I meant ₦10,000, not ₦100,000' class of mistake. Presets would also speed up the most common transfer sizes.
 
 Alongside the input, I set explicit targets with the PM before we shipped: lift the transaction success rate from **75% to 90%**, and drop the dissatisfaction rate from **40% to below 10%**.
 
 We shipped the slider in 2021.
 
-{/* IMAGE: Slide 40 (primary) — full six-screen v1 flow with slider amount picker */}
+{/* IMAGE: Slide 40 (primary) / full six-screen v1 flow with slider amount picker */}
 <ImagePlaceholder
   slideRef="Slide 40"
-  alt="Full six-screen v1 flow — Send Money with slider, Beneficiaries, Bank select, filled state, Confirm, Success"
+  alt="Full six-screen v1 flow: Send Money with slider, Beneficiaries, Bank select, filled state, Confirm, Success"
   aspect="21/9"
 />
 
-{/* IMAGE: Slide 39 (alt) — cleaner single-screen of just the v1 slider, use if Slide 40 reads too busy */}
+{/* IMAGE: Slide 39 (alt) / cleaner single-screen of just the v1 slider, use if Slide 40 reads too busy */}
 <ImagePlaceholder
   slideRef="Slide 39 (alt)"
   alt="Cleaner single-screen hero of the v1 slider amount picker"
@@ -101,14 +101,14 @@ Two weeks after rollout, the data came back brutal:
   - **User satisfaction for transfer declined by 30%**, with users specifically naming the slider in feedback
 </Callout>
 
-I had mistaken novelty for deliberateness. The slider made users *feel* like they were making a decision — but it gave them a control that was less precise than a keypad, in a context (money) where precision matters more than anything. The gesture I was trying to create — a pause before sending — turned into a guess.
+I had mistaken novelty for deliberateness. The slider made users *feel* like they were making a decision, but it gave them a control that was less precise than a keypad, in a context (money) where precision matters more than anything. The gesture I was trying to create, a pause before sending, turned into a guess.
 
 It's not a comfortable part to show in a portfolio. But it's the one I learned most from: the difference between a design decision that *feels smart* and a design decision that *actually protects the user*.
 
-{/* IMAGE: Slide 43 — yellow sticky-note callout (7/10 users + doubled reversals + 30% satisfaction decline) */}
+{/* IMAGE: Slide 43 / yellow sticky-note callout (7/10 users + doubled reversals + 30% satisfaction decline) */}
 <ImagePlaceholder
   slideRef="Slide 43"
-  alt="Yellow sticky-note callout — 7/10 users sent wrong amounts, reversal requests doubled, 30% satisfaction decline"
+  alt="Yellow sticky-note callout: 7/10 users sent wrong amounts, reversal requests doubled, 30% satisfaction decline"
   aspect="4/3"
 />
 
@@ -116,16 +116,16 @@ It's not a comfortable part to show in a portfolio. But it's the one I learned m
 
 ### Inverting the hierarchy
 
-V2 shipped in 2022 and inverted the hierarchy. Instead of a slider with presets as the primary input, the new design made **direct text entry** the primary input, with **quick-select chips** (₦10,000 · ₦100,000 · ₦1,000,000) as assistive shortcuts below. Users could type any amount precisely, or tap a preset for the common cases — but the preset was no longer the default path. The 'Proceed' CTA stayed disabled until all mandatory fields were filled, and Ghost Mode — Stellas' anonymous-transfer feature — was preserved as a toggle for users who wanted it.
+V2 shipped in 2022 and inverted the hierarchy. Instead of a slider with presets as the primary input, the new design made **direct text entry** the primary input, with **quick-select chips** (₦10,000 · ₦100,000 · ₦1,000,000) as assistive shortcuts below. Users could type any amount precisely, or tap a preset for the common cases, but the preset was no longer the default path. The 'Proceed' CTA stayed disabled until all mandatory fields were filled, and Ghost Mode (Stellas' anonymous-transfer feature) was preserved as a toggle for users who wanted it.
 
-Accessibility-wise, we held to the same standards we apply across every flow — nothing unique to call out here; the problem wasn't an accessibility gap, it was an input-precision gap.
+Accessibility-wise, we held to the same standards we apply across every flow; nothing unique to call out here. The problem wasn't an accessibility gap, it was an input-precision gap.
 
-The design worked because the slowness now lived at the **confirm** step, where users wanted it — not at the **input** step, where they wanted speed with accuracy.
+The design worked because the slowness now lived at the **confirm** step, where users wanted it, not at the **input** step, where they wanted speed with accuracy.
 
-{/* IMAGE: Slide 45 — hero asset: fully-annotated v2 Send Money screen */}
+{/* IMAGE: Slide 45 / hero asset: fully-annotated v2 Send Money screen */}
 <ImagePlaceholder
   slideRef="Slide 45"
-  alt="Fully-annotated v2 Send Money screen — new input field, three quick-select chips, bank/account/narration inputs, Ghost Mode toggle, disabled Proceed button"
+  alt="Fully-annotated v2 Send Money screen: new input field, three quick-select chips, bank/account/narration inputs, Ghost Mode toggle, disabled Proceed button"
   aspect="3/4"
 />
 
@@ -141,17 +141,17 @@ The design worked because the slowness now lived at the **confirm** step, where 
 
 Beyond the numbers, the support team noticed the shift within the first week: *'I sent the wrong amount'* dropped off the top-five ticket list for the first time since launch.
 
-{/* IMAGE: Slide 47 — results stats (70% / 40% / 90%) over confetti background */}
+{/* IMAGE: Slide 47 / results stats (70% / 40% / 90%) over confetti background */}
 <ImagePlaceholder
   slideRef="Slide 47"
-  alt="Results stats — 70% / 40% / 90% — over a confetti background"
+  alt="Results stats (70% / 40% / 90%) over a confetti background"
   aspect="16/9"
 />
 
-{/* IMAGE: Slide 37 (optional) — pre-launch goals (75→90%, 40→<10%), shows targets set up front */}
+{/* IMAGE: Slide 37 (optional) / pre-launch goals (75 to 90%, 40 to below 10%), shows targets set up front */}
 <ImagePlaceholder
   slideRef="Slide 37 (optional)"
-  alt="Pre-launch goals — success rate 75% → 90%, dissatisfaction 40% → below 10%"
+  alt="Pre-launch goals: success rate 75% to 90%, dissatisfaction 40% to below 10%"
   aspect="16/9"
 />
 
@@ -159,7 +159,7 @@ Beyond the numbers, the support team noticed the shift within the first week: *'
 
 ### The lesson
 
-The slider was a lesson in mistaking the *feel* of a decision for the *fact* of one. Users don't want a design to perform care for them — they want the interaction to make the right outcome the easy one. On any high-stakes input now (money, irreversible actions, account changes), I default to friction at the **confirm** step, not friction at the **input**.
+The slider was a lesson in mistaking the *feel* of a decision for the *fact* of one. Users don't want a design to perform care for them; they want the interaction to make the right outcome the easy one. On any high-stakes input now (money, irreversible actions, account changes), I default to friction at the **confirm** step, not friction at the **input**.
 
 <Callout kind="principle" label="Design principle carried into later onboarding and account-deletion work">
   "The moment a user cares most is the moment we slow down."
