@@ -45,8 +45,9 @@ export const projects: Project[] = [
   },
   {
     slug: "stellas-bank",
-    title: "Stellas Digital Bank",
-    subtitle: "Mobile Application Design: Transforming Fintech Excellence",
+    title: "Rebuilding Stellas' Transfer Flow",
+    subtitle:
+      "A slider that felt smart in design review backfired in production. The redesign hit every target we missed the first time.",
     category: "Fintech",
     color: "from-orange-500/20 to-orange-900/5",
     image: "/images/stellas-cover.png",

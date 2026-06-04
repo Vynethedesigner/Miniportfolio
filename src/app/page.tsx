@@ -8,17 +8,17 @@ import { type ReactNode } from "react";
 
 const projects = [
   {
-    title: "RedCloud",
+    title: "Building a design system for an AI-first team",
     category: "Design System",
     color: "from-cyan-500/20 to-blue-900/5",
     image: "",
     href: "/projects/redcloud",
   },
   {
-    title: "Stellas Digital Bank",
+    title: "Rebuilding Stellas' Transfer Flow",
     category: "Fintech",
     color: "from-orange-500/20 to-orange-900/5",
-    image: "/images/stellas-cover.png",
+    image: "/images/stellas-cover-shot.png",
     href: "/projects/stellas-bank",
   },
   {
