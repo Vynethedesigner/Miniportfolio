@@ -12,6 +12,8 @@ type MdxCaseStudy = {
 };
 
 const mdxProjects: Record<string, () => Promise<MdxCaseStudy>> = {
+  redcloud: () =>
+    import("@/content/projects/redcloud.mdx") as Promise<MdxCaseStudy>,
   "stellas-bank": () =>
     import("@/content/projects/stellas-bank.mdx") as Promise<MdxCaseStudy>,
   wastenot: () =>

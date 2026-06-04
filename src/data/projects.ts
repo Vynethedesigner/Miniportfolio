@@ -29,6 +29,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "redcloud",
+    title: "Building a design system that worked for an AI-first team",
+    subtitle:
+      "The CTO asked for a style guide. Engineering's review pushed it into something more.",
+    category: "Design System",
+    color: "from-cyan-500/20 to-blue-900/5",
+    image: null,
+    year: "2026",
+    role: ["Senior Product Designer"],
+    industry: ["B2B Commerce", "Fintech"],
+    overview:
+      "Built a production-grade design system for RedCloud's AI-first product workflow: a single HTML library plus a 109-token JSON file, shipped after multiple rounds of engineering review and adopted across four internal product platforms.",
+    sections: [],
+  },
+  {
     slug: "stellas-bank",
     title: "Stellas Digital Bank",
     subtitle: "Mobile Application Design: Transforming Fintech Excellence",

@@ -41,6 +41,33 @@ const components: MDXComponents = {
   strong: ({ children }) => (
     <strong className="font-semibold text-white">{children}</strong>
   ),
+  code: ({ children }) => (
+    <code className="rounded bg-dark-card border border-border text-[0.9em] px-1.5 py-0.5 font-mono text-muted-light">
+      {children}
+    </code>
+  ),
+  table: ({ children }) => (
+    <div className="my-8 overflow-x-auto rounded-xl border border-border">
+      <table className="w-full text-sm">{children}</table>
+    </div>
+  ),
+  thead: ({ children }) => (
+    <thead className="bg-dark-card text-left text-xs uppercase tracking-widest text-muted">
+      {children}
+    </thead>
+  ),
+  tbody: ({ children }) => <tbody>{children}</tbody>,
+  tr: ({ children }) => (
+    <tr className="border-b border-border last:border-b-0">{children}</tr>
+  ),
+  th: ({ children }) => (
+    <th className="px-5 py-3 font-medium">{children}</th>
+  ),
+  td: ({ children }) => (
+    <td className="px-5 py-4 align-top text-muted-light leading-relaxed">
+      {children}
+    </td>
+  ),
   hr: () => <hr className="my-12 border-border" />,
 };
 

@@ -8,6 +8,13 @@ import { type ReactNode } from "react";
 
 const projects = [
   {
+    title: "RedCloud",
+    category: "Design System",
+    color: "from-cyan-500/20 to-blue-900/5",
+    image: "",
+    href: "/projects/redcloud",
+  },
+  {
     title: "Stellas Digital Bank",
     category: "Fintech",
     color: "from-orange-500/20 to-orange-900/5",
@@ -20,13 +27,6 @@ const projects = [
     color: "from-emerald-500/20 to-emerald-900/5",
     image: "/images/wastenot-1.png",
     href: "/projects/wastenot",
-  },
-  {
-    title: "Medstation",
-    category: "Health · B2C, B2B",
-    color: "from-teal-500/20 to-teal-900/5",
-    image: "/images/medstation.png",
-    href: "/projects/medstation",
   },
   {
     title: "Interstellas",
