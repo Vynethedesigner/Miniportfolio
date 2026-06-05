@@ -11,15 +11,12 @@ export const meta = {
   year: "2026",
   role: ["Senior Product Designer"],
   industry: ["B2B Commerce", "Fintech"],
-  team:
-    "Two designers, an engineering team of eight, four PMs",
+  team: "Cross-functional, design and engineering",
 };
 
-{/* IMAGE: Visual 1 / Hero component wall — buttons, badges, form fields, modals, tabs, sidebar nav pulled from the live HTML library */}
-<ImagePlaceholder
-  slideRef="Visual 1 — Hero"
-  alt="Component wall hero: a tight grid of buttons, badges, form fields, modals, tabs, and side navigation pulled from the live HTML library on a neutral background"
-  aspect="16/9"
+<Figure
+  src="/images/redcloud-hero.png"
+  alt="RedCloud Design System hero: large title text on the left, components on the right (buttons, color swatches, task card, badge states, spacing tokens) on a dark navy dotted background"
 />
 
 ## Context
@@ -29,13 +26,6 @@ By early 2026, RedCloud had a problem that wasn't really about design.
 A wave of PM-led prototyping was running across the company. Every PM with an idea was now able to spin up a demo themselves, in Lovable, Figma Make, sometimes Claude. Some were polished, some weren't. Each one looked like it came from a different company. I'd join one meeting and see one product, join the next and see something completely different, with no shared visual language between them.
 
 The deeper issue wasn't the inconsistency itself. It was what the inconsistency implied. With so many demos going out, it had started to feel, internally and externally, like the company didn't have designers. The design team's work was being eclipsed by a workflow where anyone could ship something that looked like a product.
-
-{/* IMAGE: Visual 2 / The problem — four synthetic dashboards in deliberately different styles */}
-<ImagePlaceholder
-  slideRef="Visual 2 — The problem"
-  alt="Four synthetic dashboard mockups in a 2x2 grid, each deliberately styled differently (rounded pastel, sharp corporate, consumer-feeling, industrial) with generic placeholder content"
-  aspect="16/9"
-/>
 
 I was watching this from a specific position: I'd already been using Claude in my own time, building components and exploring what AI-assisted design looked like done with discipline. So I could see the gap between what was possible and what was being shipped as demos. Most PMs couldn't.
 
@@ -55,11 +45,9 @@ We made a few decisions early that turned out to matter more than we expected:
 - **Tokens before components.** Every spacing value, radius, colour, and state needed a named token before any component used it. No hardcoded values anywhere.
 - **Rules before output.** Designing a system in Claude means setting strict rules up front, naming conventions, token hierarchy, what to use when, because without that discipline an AI tool will happily generate inconsistent variants forever. The rules turned out to be as much of the work as the components themselves.
 
-{/* IMAGE: Visual 3 / Token map — one component in the centre with lines radiating out to all the tokens that compose it */}
-<ImagePlaceholder
-  slideRef="Visual 3 — Token map"
-  alt="A token-to-component diagram: a button in the centre with eight to ten labelled tokens (--radius-md, --color-primary-blue, --space-button-padding-x, hover/focus state tokens, icon-size tokens) radiating out from it"
-  aspect="4/3"
+<Figure
+  src="/images/redcloud-token-map.jpg"
+  alt="Token map: a primary button at the centre with ten tokens radiating out, each labelled with its name (--radius-md, --space-3, --size-control-lg, --color-text-primary, --gradient-cta, --color-primary-blue-hover, --color-border-focus, --type-body, --weight-medium, --leading-tight) and value"
 />
 
 The second important constraint, and one we couldn't plan around: Claude was rolling out new design features during the period we were building. There was no existing methodology for how to do this. We were figuring out how to design a production-grade system in a tool whose capabilities were changing under us week by week.
@@ -70,29 +58,23 @@ The library shipped as a single HTML file plus an accompanying JSON token file, 
 
 It covered nine core components: buttons, badges, toggles and view switchers, side navigation, form elements, modals and dialogs, pagination, tabs, and prompt fields. Across those nine components sat 40+ distinct variants and states, all derived from a structured token system underneath.
 
-{/* IMAGE: Visual 4 / Component breakdown — the nine components with variant + state counts, treated like a contents page */}
-<ImagePlaceholder
-  slideRef="Visual 4 — Component breakdown"
-  alt="A styled contents page listing the nine components with their variant and state counts: Buttons (6 variants + 2 sizes + hover/active states), Badges (10 variants), Toggle/View Switcher (2), Side Navigation (2 states), Form Elements (6 controls), Modals/Dialogs (4), Pagination (3), Tabs (3), Prompt Field (5 states)"
-  aspect="4/3"
+<Figure
+  src="/images/redcloud-components.png"
+  alt="A composite of the design system's components: primary and secondary buttons, list/map view switcher, brand colour blocks, a tasks card and success palette card, default/success/warning/error/info badges, button and badge corner-radius examples, a text input, and a module card with toggle states"
 />
 
 The token system itself ended up doing more work than the components. By the time the library shipped its production version, it contained 109 named tokens, every spacing value, radius, control height, padding measurement, state colour, semantic interaction state, mapped to a token name and ready to be consumed by engineering's build pipeline as JSON.
 
-{/* IMAGE: Visual 5 / JSON snippet — anonymised token file excerpt showing meta block, colour tokens, spacing tokens */}
-<ImagePlaceholder
-  slideRef="Visual 5 — JSON snippet"
-  alt="An anonymised JSON token file excerpt (~15-20 lines): a meta block, a section of colour tokens (brand and semantic), and a few spacing tokens, syntax-highlighted on a dark background in a monospace font"
-  aspect="16/9"
+<Figure
+  src="/images/redcloud-tokens-json.png"
+  alt="A syntax-highlighted excerpt of redcloud-design-tokens.json: the meta block (name, version, description, updated), then brand colour tokens (primary navy, primary blue and hover state, accent orange, accent cyan), semantic tokens (success, warning, error, info, destructive — each with text, bg, and border variants), and surface tokens (page, card, elevated, overlay)"
 />
 
 We made an internal announcement when the library went live. The CTO replied directly:
 
-{/* IMAGE: Visual 6 / CTO recognition — real screenshot of the CTO's message, name and avatar removed */}
-<ImagePlaceholder
-  slideRef="Visual 6 — CTO recognition"
-  alt="Cropped screenshot of the CTO's reply message after the library launched, name and avatar removed: 'This is a real step forward for RedCloud.'"
-  aspect="16/9"
+<Figure
+  src="/images/redcloud-cto-recognition.png"
+  alt="Two email screenshots side by side. Left: the team's launch announcement of the new Design Library and Component Guidebook, available in .md and HTML formats for branding, development, and prototypes. Right: the CTO's reply, 'This is a real step forward for RedCloud.'"
 />
 
 That message mattered, not because of the praise, but because it confirmed the work landed where it was meant to: leadership recognised the library as infrastructure, not as decoration.
@@ -111,11 +93,9 @@ Engineering didn't accept the library on first delivery. The lead engineer revie
 
 Each round, I closed the gaps and resubmitted. Five items in one round, two more in the next, then a final detail about Tab Bar coverage that wasn't in the spec but engineering wanted documented.
 
-{/* IMAGE: Visual 7 / Review loop — stylised chat-bubble reconstruction of the engineering review iterations */}
-<ImagePlaceholder
-  slideRef="Visual 7 — Review loop"
-  alt="A stylised chat-bubble reconstruction of the engineering review iterations: alternating dark-mode message bubbles (no avatars, no names) showing three or four paraphrased exchanges between the lead engineer and the designer, each round closing more gaps"
-  aspect="4/3"
+<Figure
+  src="/images/redcloud-review-loop.png"
+  alt="Engineering review thread: on the left, a designer's update listing five items addressed (named tokens for every production spacing/radius/size, semantic interaction tokens for each component state, explicit tokens for circular shapes and icon-only controls, a per-component Token Coverage Checklist, and modal styling) plus the JSON token file linked. On the right, the engineer's follow-ups flagging two remaining items (Calendar checklist section, replacing remaining raw values with token names), a tab-bar coverage note, and a final 'Latest changes applied' confirmation"
 />
 
 What that review process did, quietly, was redefine what "done" meant. The original brief was a style guide for PMs. By the time engineering signed off, the deliverable had evolved into a production-grade token system with a JSON file ready to plug into the build pipeline. That shift, from design reference to production artefact, was the most important thing that happened in the project, and it didn't happen until engineering pushed for it.
@@ -143,13 +123,6 @@ Beyond the numbers, the working dynamic shifted. PMs now send work to the design
 ### Still building
 
 It's worth being honest about what this case study is documenting: a first production version, not a finished product. Nine components is a starting point, not an end state. Design systems don't finish; they grow as new patterns surface, as new platforms get built, as the underlying tools (Claude included) evolve their own capabilities. The library covers the patterns the company needed in early 2026. The Phase 2 work, deeper component coverage, more semantic patterns, integration into more product surfaces, is ongoing.
-
-{/* IMAGE: Visual 9 (optional) / Roadmap — current nine components shown clearly, plus 'coming next' slots greyed out */}
-<ImagePlaceholder
-  slideRef="Visual 9 — Roadmap (optional)"
-  alt="A component coverage map: the nine current components shown clearly (filled in), plus 'coming next' component slots greyed out (Cards, Toasts, Data Tables, Calendar, Search)"
-  aspect="16/9"
-/>
 
 That's the point, actually. A design system that's "done" is one that's stopped serving the team using it.
 
