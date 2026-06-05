@@ -11,7 +11,7 @@ const projects = [
     title: "Building a design system for an AI-first team",
     category: "Design System",
     color: "from-cyan-500/20 to-blue-900/5",
-    image: "",
+    image: "/images/redcloud-hero.png",
     href: "/projects/redcloud",
   },
   {
