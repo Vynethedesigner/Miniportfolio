@@ -90,6 +90,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "vault",
+    title: "Vault: Designing savings as a proposition, not a feature",
+    subtitle:
+      "How Vault made Stellas a place money could live, not just pass through.",
+    category: "Fintech",
+    color: "from-amber-500/20 to-rose-900/5",
+    image: "/images/vault-hero.png",
+    year: "2023",
+    role: ["Senior Product Designer", "Product Lead"],
+    industry: ["Fintech", "Digital Banking"],
+    overview:
+      "Stellas was becoming a transit account — salaries landed, then moved straight out to savings-native fintechs like PiggyVest. Vault gave money a reason to stay: a four-tier savings product (Target, Lifestyle, Flexi, Lock) architected around how users actually think about their money — by the shape of the goal, not the interest rate.",
+    sections: [],
+  },
+  {
     slug: "wastenot",
     title: "WasteNot",
     subtitle: "Streamlining B2B Advertising Through Innovative Design",

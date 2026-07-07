@@ -29,11 +29,11 @@ const projects = [
     href: "/projects/wastenot",
   },
   {
-    title: "Interstellas",
-    category: "Financial Services",
-    color: "from-blue-500/20 to-blue-900/5",
-    image: "/images/interstellas-1.png",
-    href: "/projects/interstellas",
+    title: "Vault: Savings as a proposition",
+    category: "Fintech",
+    color: "from-amber-500/20 to-rose-900/5",
+    image: "/images/vault-cover.png",
+    href: "/projects/vault",
   },
   {
     title: "Wekurnect",
