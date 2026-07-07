@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects, getProjectBySlug } from "@/data/projects";
+import { projects, getProjectBySlug, getNextProject } from "@/data/projects";
 import CaseStudyLayout, {
   type CaseStudyMeta,
 } from "@/components/case-study/CaseStudyLayout";
@@ -40,6 +40,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: `${meta.title} — Uche Divine`,
       description: meta.subtitle,
+      openGraph: {
+        title: meta.title,
+        description: meta.subtitle,
+        type: "article",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: meta.title,
+        description: meta.subtitle,
+      },
     };
   }
 
@@ -48,6 +58,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${project.title} — Uche Divine`,
     description: project.subtitle,
+    openGraph: {
+      title: project.title,
+      description: project.subtitle,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.subtitle,
+    },
   };
 }
 
@@ -243,8 +263,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Next Project */}
         {(() => {
-          const currentIndex = projects.findIndex((p) => p.slug === slug);
-          const nextProject = projects[(currentIndex + 1) % projects.length];
+          const nextProject = getNextProject(slug);
           return (
             <div className="mt-24 pt-12 border-t border-border">
               <p className="text-xs text-muted uppercase tracking-widest mb-6">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { projects } from "@/data/projects";
+import { getNextProject } from "@/data/projects";
 
 export type CaseStudyMeta = {
   slug: string;
@@ -23,11 +23,7 @@ type CaseStudyLayoutProps = {
 };
 
 export default function CaseStudyLayout({ meta, children }: CaseStudyLayoutProps) {
-  const currentIndex = projects.findIndex((p) => p.slug === meta.slug);
-  const nextProject =
-    currentIndex >= 0
-      ? projects[(currentIndex + 1) % projects.length]
-      : projects[0];
+  const nextProject = getNextProject(meta.slug);
 
   return (
     <div className="min-h-screen bg-dark text-white overflow-x-hidden">

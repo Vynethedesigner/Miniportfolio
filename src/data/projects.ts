@@ -251,3 +251,33 @@ export const projects: Project[] = [
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
+
+/**
+ * Curated "Next Project" routing.
+ *
+ * The tier-one pieces (Vault, Stellas Transfer, RedCloud) form a closed loop,
+ * so anyone clicking through Next Project always lands on another strongest
+ * piece rather than the CMS default order (which would drop them into tier-two
+ * work). Tier-two pieces feed back into that loop. Tier-two case studies stay
+ * visible in the main grid — they just aren't linked as Next Project targets.
+ */
+const nextProjectMap: Record<string, string> = {
+  // Tier-one loop
+  vault: "stellas-bank",
+  "stellas-bank": "redcloud",
+  redcloud: "vault",
+  // Tier-two → back into the tier-one loop
+  wastenot: "vault",
+  medstation: "stellas-bank",
+  interstellas: "redcloud",
+  wekurnect: "vault",
+};
+
+export function getNextProject(slug: string): Project {
+  const mapped = nextProjectMap[slug];
+  const next = mapped ? getProjectBySlug(mapped) : undefined;
+  if (next) return next;
+  // Fallback: original cyclic order if a slug isn't mapped.
+  const i = projects.findIndex((p) => p.slug === slug);
+  return projects[(i + 1) % projects.length];
+}
