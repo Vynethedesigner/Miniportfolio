@@ -37,6 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (mdxProjects[slug]) {
     const { meta } = await mdxProjects[slug]();
+    const cover = getProjectBySlug(slug)?.image ?? meta.cover ?? undefined;
+    const images = cover ? [{ url: cover, alt: meta.title }] : undefined;
     return {
       title: `${meta.title} — Uche Divine`,
       description: meta.subtitle,
@@ -44,17 +46,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: meta.title,
         description: meta.subtitle,
         type: "article",
+        images,
       },
       twitter: {
         card: "summary_large_image",
         title: meta.title,
         description: meta.subtitle,
+        images,
       },
     };
   }
 
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Not Found" };
+  const cover = project.image ?? undefined;
+  const images = cover ? [{ url: cover, alt: project.title }] : undefined;
   return {
     title: `${project.title} — Uche Divine`,
     description: project.subtitle,
@@ -62,11 +68,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: project.title,
       description: project.subtitle,
       type: "article",
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title: project.title,
       description: project.subtitle,
+      images,
     },
   };
 }
